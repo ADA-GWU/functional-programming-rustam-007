@@ -4,14 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        // as in Java, you need to specify array length I take n as input for array's length
-        int[] input = new int[n];
-        for (int i = 0; i < input.length; i++) {
-            input[i] = sc.nextInt();
-        }
+        String in = sc.nextLine();
+        String[] input = in.split(" ");
 
-        int[] result = reverse(input);
+        String[] result = reverse(input);
 
         System.out.print("[");
         for (int i = 0; i < result.length; i++) {
@@ -21,8 +17,8 @@ public class Main {
         System.out.println("]");
     }
 
-    static int[] reverse(int[] array) {
-        int[] reverseArray = new int[array.length];
+    static String[] reverse(String[] array) {
+        String[] reverseArray = new String[array.length];
         int j = 0;
         for (int i = array.length - 1; i >= 0; i--) {
             reverseArray[j] = array[i];
